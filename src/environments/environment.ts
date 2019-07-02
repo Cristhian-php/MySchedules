@@ -3,8 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyCZb1RycqNHUKr1Y2Cra9aQJvs7248Knuo",
+    authDomain: "myschedules-93294.firebaseapp.com",
+    databaseURL: "https://myschedules-93294.firebaseio.com",
+    projectId: "myschedules-93294",
+    storageBucket: "",
+    messagingSenderId: "623167345013",
+    appId: "1:623167345013:web:35e6ede858eba670"
+  }
+ };
 
 /*
  * For easier debugging in development mode, you can import the following file

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary" (click)="logout()">
+      <ion-button>Log Out</ion-button>
+    </ion-buttons>
+    <ion-title>MySchedules</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item>
+      <ion-label>Escolha o cliente</ion-label>
+      <ion-select>
+        <ion-select-option value="GDias">G Dias Paticipações S/A</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-radio-group>
+      <ion-list-header>
+        <ion-label>Rotina</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Chegada</ion-label>
+        <ion-radio slot="start" color="success" value="apple"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Saida</ion-label>
+        <ion-radio slot="start" color="tertiary" value="grape" checked></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>  
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block">Salvar</ion-button>
+  </ion-toolbar>  
+
+</ion-footer>

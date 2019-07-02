@@ -9,15 +9,36 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+//Importando os pacotes AngularFire e AngularFireAuthModule.
+import { environment } from 'src/environments/environment';
+import { AuthenticationService } from './services/authentication.service';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+ 
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { AngularFireModule } from 'angularfire2/';
+import * as firebase from 'firebase';
+
+firebase.initializeApp(environment.firebase);
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    ReactiveFormsModule,
+    BrowserModule,
+    IonicModule.forRoot(), 
+    AppRoutingModule, 
+    AngularFireAuthModule
+  ],
+
   providers: [
+    AuthenticationService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule {}
